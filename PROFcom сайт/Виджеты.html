@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style/Widget.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Лого/new-logo2.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+    <title>PROFcom | Виджеты</title>
+</head>
+<body>
+
+
+<div class='header' id="d1">
+    <div class="overlay">
+        <div class='container'>
+            <div class='header-line'>
+                <div class='header-logo'>
+                    <img src="Лого/new_logo_small1.png" alt="">
+                </div>
+
+                <div class='nav'>
+                    <a class='nav-item' href="./Главная.html">ГЛАВНАЯ</a>
+                    <a class='nav-item' href="./Виджеты.html" id="item-true">ВИДЖЕТЫ</a>
+                    <a class='nav-item' href="./Контакт-центр.html">КОНТАНТ-ЦЕНТР</a>
+                    <a class='nav-item' href="./Разработка%20ботов.html">РАЗРАБОТКА БОТОВ</a>
+                </div>
+
+
+                <div class='phone'>
+                    <div class='phone-holder'>
+                        <div class='phone-img'>
+                            <img src="Значки/phone.png" alt="">
+                        </div>
+
+                        <div class='number'>
+                            <a class='num' href='tel:+79519024533'>+7 951-902-45-33</a>
+                            <br>
+                            <a class='num' href='tel:+79200752000'>+7 920-075-20-00</a>
+                        </div>
+                    </div>
+
+                    <div class='phone-text'>
+                        Свяжитесь с нами
+                    </div>
+                </div>
+
+                <div class='btn1'>
+                    <a class='button' href='https://cabinet.profcom.online/signin' target="_blank">Авторизация</a>
+                </div>
+                <div class='btn'>
+                    <a class='button' href='https://cabinet.profcom.online/signup' target="_blank">Регистрация</a>
+                </div>
+
+                <div class='burger-menu'>
+                    <button id='burger' class="burger-button" tabindex="0">
+                        <div class="burger-icon">
+                            <img src="Значки/burger-img.png" alt="">
+                        </div>
+                    </button>
+                    <div id='menu' class='burger-slide'>
+                        <a class='nav-item-burger block' href="./Главная.html">ГЛАВНАЯ</a>
+                        <a class='nav-item-burger block' href="./Виджеты.html" id="item-burger-true">ВИДЖЕТЫ</a>
+                        <a class='nav-item-burger block' href="./Контакт-центр.html">КОНТАКТ-ЦЕНТР</a>
+                        <a class='nav-item-burger block' href="./Разработка%20ботов.html">РАЗРАБОТКА БОТОВ</a>
+                        <a class='nav-item-burger block' href='https://cabinet.profcom.online/signin'>АВТОРИЗАЦИЯ</a>
+                        <a class='nav-item-burger block' href='https://cabinet.profcom.online/signup'>РЕГИСТРАЦИЯ</a>
+                        <div class="close-button">✕</div>
+                        <div class='number-burger'>
+                            <a class='num-burger' href='tel:+79519024533'>+7 951-902-45-33</a>
+                            <br>
+                            <a class='num-burger' href='tel:+79200752000'>+7 920-075-20-00</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='header-down'>
+                <div class='header-title'>
+                    Виджеты
+                    <div class='header-suptitle'>
+                        PROFcom
+                    </div>
+                    <div id="myBtn" class='header-bth'>
+                        <a class='header-button'>Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p class="close">&times;</p>
+        <div class="modal-dodal">
+            <div class='online-text'>
+                ОСТАВЬТЕ ЗАЯВКУ
+                <div class='online-text-bottom'>
+                    на бесплатную установку сервиса PROFcom на Вашем сайте и эффективную настройку нашими экспертами
+                </div>
+            </div>
+
+            <form class="form-main" action="Forms/widget.php" method="post">
+                <div class="form-block">
+                    <div class="form-name-site">
+                        <input class="form-name" type="text" name="name" id="name" required>
+                        <label class="name">Ваше имя</label>
+                    </div>
+                    <div class="form-phone-email">
+                        <input id="online_phone" name="phone" type="text" required>
+                        <label class="online_phone">Номер Вашего телефона</label>
+                    </div>
+                    <div class="form-name-site">
+                        <input class="form-site" type="text" name="website" id="website" required>
+                        <label class="name">Сайт Вашей компании</label>
+                    </div>
+                    <div class="form-phone-email">
+                        <input class="form-email" type="email" name="email" id="email" required>
+                        <label class="online_phone">Ваша электронная почта</label>
+                    </div>
+                </div>
+
+                <div class="form-text-container">
+                    <textarea class="form-text" name="text" id="text" autofocus="autofocus"></textarea>
+                    <label class="form-text-label" id="text-label" for="text">Какие задачи необходимо выполнить?</label>
+                </div>
+
+                <button class="mobile-button" type="submit">Отправить</button>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class='cards'>
+    <div class='container'>
+        <div class='cards-holder'>
+            <div class='card'><br class="top-title">
+                <div class='card-title'>
+                    ОБРАТНЫЙ<span>ЗВОНОК</span>
+                </div>
+
+                <div class='card-desc'>
+                    Умный виджет увеличивает количество звонков с сайта без увеличения расходов на рекламу. Виджет для
+                    самых активных посетителей сайта.
+                </div>
+
+                <div class='card-image'>
+                    <img class='card-img-widget' src='Виджеты/Обратный звонок.png'>
+                </div>
+
+                <div class='button-center'>
+                    <div id="btn-callback" class='btn-more-widget'>
+                        <a class='header-button'>Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-callback" class="modal">
+                <div class="modal-content">
+                    <p class="close-callback">&times;</p>
+                    <div class="modal-dodal">
+                        <div class='online-text'>
+                            ОБРАТНЫЙ ЗВОНОК
+                            <div class='online-text-bottom'>
+                                Увеличивает количество звонков с сайта в 3,8 раза!<br><br>
+                            </div>
+                            <div class='online-text-bottom2'>
+                                <span>
+                                • Сокращает расходы благодаря значительному росту количества заказов звонка с сайта без
+                                увеличения бюджета.<br>
+                                </span>
+                                <span>
+                                • Записывает разговоры с клиентами в личном кабинете, на почте, по SMS и в любимом
+                                мессенджере — анализируйте и развивайте отдел продаж.<br>
+                                </span>
+                                <span>
+                                • Повышает доверие и лояльность клиентов и уведомляет Вас о повторном посещении сайта
+                                клиентом — Ваша компания открыта для обратной связи.<br>
+                                </span>
+                                <span>
+                                • Повышает лояльность клиентов, так как позволяет им связаться с Вами максимально быстро и
+                                совершенно бесплатно.</span>
+                            </div>
+                        </div>
+                        <div id="want-callback" class='button-callback'>
+                            <a class='header-button'>Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card'><br class="top-title">
+                <div class='card-title'>
+                    ГЕНЕРАТОР<span> КЛИЕНТОВ</span>
+                </div>
+
+                <div class='card-desc'>
+                    Виджет со всплывающим окном с акцией, таймером и формой захвата потенциальных клиентов
+                    увеличивает количество заявок с сайта.
+                </div>
+
+                <div class='card-image'>
+                    <img class='card-img-widget' src='Виджеты/Генератор клиентов.png'>
+                </div>
+
+                <div class='button-center'>
+                    <div id="btn-generator" class='btn-more-widget'>
+                        <a class='header-button'>Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-generator" class="modal">
+                <div class="modal-content">
+                    <p class="close-generator">&times;</p>
+                    <div class="modal-dodal">
+                        <div class='online-text'>
+                            ГЕНЕРАТОР КЛИЕНТОВ
+                            <div class='online-text-bottom'>
+                                Увеличивает количество звонков с сайта в 2,4 раза!<br><br>
+                            </div>
+                            <div class='online-text-bottom2'>
+                                <span>
+                                • Сокращает расходы на рекламу благодаря эффективному росту количества обращений без
+                                увеличения бюджета.<br>
+                                </span>
+                                <span>
+                                • Помогает эффективно и быстро реализовать определенные группы товаров или услуг,
+                                анонсировать новый товар или услугу.<br>
+                                </span>
+                                <span>
+                                • Повышает лояльность клиентов и узнаваемость бренда благодаря яркой презентации
+                                специальных предложений Вашей компании.<br>
+                                </span>
+                                <span>
+                                • Позволяет собрать воедино базу номеров телефонов и/или e-mail адресов клиентов для
+                                дальнейшей продуктивной работы с ними.
+                                </span>
+                            </div>
+                        </div>
+                        <div id="want-generator" class='button-callback'>
+                            <a class='header-button'>Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card'><br class="top-title">
+
+                <div class='card-title'>
+                    ОНЛАЙН- <span> ЧАТ</span>
+                </div>
+
+                <div class='card-desc'>
+                    Виджет для общения с клиентами с живыми приглашениями и персонализацией. Виджет для
+                    посетителей сайта, желающих остаться инкогнито.
+                </div>
+
+                <div class='card-image'>
+                    <img class='card-img-widget' src='Виджеты/Онлайн-чат.png'>
+                </div>
+
+                <div class='button-center'>
+                    <div id="btn-onlinechat" class='btn-more-widget'>
+                        <a class='header-button'>Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-onlinechat" class="modal">
+                <div class="modal-content">
+                    <p class="close-onlinechat">&times;</p>
+                    <div class="modal-dodal">
+                        <div class='online-text'>
+                            ОНЛАЙН-ЧАТ
+                            <div class='online-text-bottom'>
+                                Увеличивает конверсию в 1,9 раза<br><br>
+                            </div>
+                            <div class='online-text-bottom2'>
+                                <span>
+                                • Эффективно сокращает расходы на входящие и исходящие звонки по заявкам. При наличии
+                                виджета Онлайн-чата на Вашем сайте потенциальный клиент сможет задать любой вопрос и
+                                получить мгновенный ответ в течение нескольких минут.<br>
+                                </span>
+                                <span>
+                                • Повышает лояльность клиентов благодаря быстрому обслуживанию в режиме онлайн, а также
+                                скорость перехода клиента по воронке продаж с фазы рассмотрения до совершения покупки.
+                                Если пользователю сложно разобраться с продуктом, консультация в режиме реального
+                                времени помогает ускорить принятие решения.
+                                </span>
+                            </div>
+                        </div>
+                        <div id="want-onlinechat" class='button-callback'>
+                            <a class='header-button'>Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card'><br class="top-title">
+                <div class='card-title'>
+                    КВИЗ-<span>ОПРОСНИК</span>
+                </div>
+
+                <div class='card-desc'>
+                    Виджет помогает получить контакты клиента и узнать его мнение, предложив взамен
+                    выгодный бонус, гарантирует увеличение числа заявок с сайта!
+                </div>
+
+                <div class='card-image'>
+                    <img class='card-img-widget' src='Виджеты/Квиз.png'>
+                </div>
+                <div class='button-center'>
+                    <div id="btn-quiz" class='btn-more-widget'>
+                        <a class='header-button'>Узнать больше</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="modal-quiz" class="modal">
+                <div class="modal-content">
+                    <p class="close-quiz">&times;</p>
+                    <div class="modal-dodal">
+                        <div class='online-text'>
+                            КВИЗ-ОПРОСНИК
+                            <div class='online-text-bottom'>
+                                Увеличивает количество заявок с сайта в 4,8 раза!<br><br>
+                            </div>
+                            <div class='online-text-bottom2'>
+                                <span>
+                                • Повышает продажи благодаря простому и легкому контакту с холодной аудиторией.<br>
+                                </span>
+                                <span>
+                                • Повышает лояльность клиентов и располагает к новым покупкам, так как это специальная
+                                форма для обратной связи, которая основана на опросах, викторинах, тестах и т.д.
+                                </span>
+                                <span>
+                                • Калькулятор даст возможность рассчитать результат прохождения квиза по заранее
+                                заданной формуле. Предлагайте скидки и предварительные сметы под индивидуальные запросы
+                                пользователей, как большинству клиентов интересна цена услуги.
+                                </span>
+                            </div>
+                        </div>
+                        <div id="want-quiz" class='button-callback'>
+                            <a class='header-button'>Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card'><br class="top-title">
+                <div class='card-title'>
+                    СТАДНЫЙ <span> ИНСТИНКТ</span>
+                </div>
+
+                <div class='card-desc'>
+                    Виджет имитирует ажиотажный спрос на вашем сайте, создавая иллюзию повышенной
+                    активности, что приводит к увеличению числа заявок.
+                </div>
+
+                <div class='card-image'>
+                    <img class='card-img-widget' src='Виджеты/Стадный инстинкт.png'>
+                </div>
+                <div class='button-center'>
+                    <div id="btn-instinct" class='btn-more-widget'>
+                        <a class='header-button'>Узнать больше</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="modal-instinct" class="modal">
+                <div class="modal-content">
+                    <p class="close-instinct">&times;</p>
+                    <div class="modal-dodal">
+                        <div class='online-text'>
+                            СТАДНЫЙ ИНСТИНКТ
+                            <div class='online-text-bottom'>
+                                Увеличивает конверсию в 1,7 раза!<br><br>
+                            </div>
+                            <div class='online-text-bottom2'>
+                                <span>
+                                • Сокращает расходы благодаря росту числа обращений с сайта без увеличения бюджета —
+                                Увидел, услышал и тоже захотел!<br>
+                                </span>
+                                <span>
+                                • Привлекает новых клиентов быстро, так работает импульсивная реакция — люди
+                                склонны подражать другим.
+                                </span>
+                                <span>
+                                • Повышает доверие и лояльность клиентов благодаря многочисленным заказам на Вашем
+                                сайте. Посетителю кажется, что на сайте прямо сейчас совершается множество покупок.
+                                </span>
+                                <span>
+                                • Оповещает клиентов о важных событиях и акциях. Вы можете настроить, сколько и кому
+                                показывать виджет в соответствии с различными критериями.
+                                </span>
+                            </div>
+                        </div>
+                        <div id="want-instinct" class='button-callback'>
+                            <a class='header-button'>Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='card'><br class="top-title">
+                <div class='card-title'>
+                    МУЛЬТИ<span>КНОПКА</span>
+                </div>
+
+                <div class='card-desc'>
+                    Одна кнопка совмещает всё, что нужно клиенту: выбор удобного способа связи, возможность перейти на
+                    страницу с акцией или построить маршрут.
+                </div>
+
+                <div class='card-image'>
+                    <img class='card-img-widget' src='Виджеты/Мультикнопка.png'>
+                </div>
+                <div class='button-center'>
+                    <div id="btn-multibutton" class='btn-more-widget'>
+                        <a class='header-button'>Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal-multibutton" class="modal">
+                <div class="modal-content">
+                    <p class="close-multibutton">&times;</p>
+                    <div class="modal-dodal">
+                        <div class='online-text'>
+                            МУЛЬТИКНОПКА
+                            <div class='online-text-bottom'>
+                                Увеличивает количество обращений с сайта в 2,4 раза!<br><br>
+                            </div>
+                            <div class='online-text-bottom2'>
+                                <span>
+                                • Увеличивает продажи, так как оповещает посетителей сайта о специальных предложениях
+                                и акциях.<br>
+                                </span>
+                                <span>
+                                • Позволяет быстро реализовать определенные группы товаров и услуг, повышая шансы на
+                                их продажу
+                                </span>
+                                <span>
+                                • Повышает лояльность клиентов благодаря широкому выбору способов связи, среди которых
+                                они могут выбрать подходящий.
+                                </span>
+                                <span>
+                                • Помогает сформировать базу клиентов, предлагая подписаться на канал в Telegram и
+                                группы в социальных сетях.
+                                </span>
+                            </div>
+                        </div>
+                        <div id="want-multibutton" class='button-callback'>
+                            <a class='header-button'>Оставить заявку</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class='history'>
+    <div class='container'>
+        <div class='history-holder'>
+            <div class='history-info'>
+                <div class='history-title'>
+                    Как работает <span>сервис PROFcom</span>
+                </div>
+
+                <div class='history-desc'>
+                    <div class='nav-item-widget'>
+                        ШАГ 1 - УСТАНОВИТЕ НА САЙТЕ КОД<span class="plus">+</span><span class="cross">×</span>
+                        <div class="description">Вы можете легко установить скрипт кода сервиса самостоятельно за 3
+                            минуты по небольшой инструкции или поставить задачу программисту или нашим сотрудникам.
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class='nav-item-widget'>
+                        ШАГ 2 - НА САЙТЕ ПОЯВИТСЯ ВИДЖЕТ<span class="plus">+</span><span class="cross">×</span>
+                        <div class="description">Посетитель сайта взаимодействует с виджетом: оставляет свой номер
+                            телефона в окне Обратного Звонка, Генератора Клиентов или Квиза-опросника, обращается в
+                            Онлайн-чат за консультацией.
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class='nav-item-widget'>
+                        ШАГ 3 - СЕРВИС ОБЕСПЕЧИТ НАДЕЖНУЮ СВЯЗЬ<span class="plus">+</span><span class="cross">×</span>
+                        <div class="description">Клиент, взаимодействуя с виджетами сервиса на Вашем сайте, ожидает
+                            обратную связь от компании. Поэтому ВАЖНО обеспечить своевременную обратную связь со стороны
+                            сотрудников компании. Ваши сотрудники должны быть готовы оперативно принять звонок, ответить
+                            на обращение клиента в чате и.т.п.
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class='nav-item-widget'>
+                        ШАГ 4 - ВЫ ПОЛУЧАЕТЕ КОНТАКТЫ КЛИЕНТА<span class="plus">+</span><span class="cross">×</span>
+                        <div class="description">После целевого взаимодействия посетителя сайта с виджетами сайта Вы
+                            получите заявку с указанием подробной информации о посетителе (Регион, Имя, Рекламная
+                            кампания, UTM метки и другие показатели), а также запись звонка, если используете Обратный
+                            звонок.
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class='history-number'>
+                    <div class='number-item'>
+                        <span>более</span> 500 <span>компаний используют виджеты</span>
+                    </div>
+
+                    <div class='number-item'>
+                        <span>около</span>50000 <span>звонков в месяц</span>
+                    </div>
+
+                    <div class='number-item'>
+                        <span>более</span>25000 <span>обращений в чат</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class='history-images'>
+                <img class='imgages-1' src="Как работает/1.jpg" alt="">
+                <img class='imgages-2' src="Как работает/2.jpg" alt="">
+                <img class='imgages-3' src="Как работает/3.jpg" alt="">
+                <img class='imgages-4' src="Как работает/4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class='black-block'>
+    <div class='container'>
+        <div class='block-holder'>
+            <div class='left'>
+                <div class='left-title'>
+                    Виджеты PROFcom
+                </div>
+
+                <div class='left-text'>
+                    для лидогенерации и <br>коммуникации с клиентами
+                </div>
+            </div>
+
+            <div class='right'>
+                <div id="right-myBtn" class='right-button'>
+                    <a class='right-btn'>Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="vospominan">
+    <div class='menu-title1'>
+        ОТЗЫВЫ КЛИЕНТОВ
+    </div>
+
+    <div class="slider-controls">
+        <button class="prev-slide">◀</button>
+        <button class="next-slide">▶</button>
+    </div>
+    <div class="karusetulava">
+        <div>
+            <figure class="testimonial">
+                <blockquote>На сайт подключали виджеты "Обратный звонок" и "Мультикнопка" с мессенджерами. Результат
+                    превзошёл наши ожидания. Количество заявок с сайта в отдел продаж увеличилось в 2,5 раза. Виджет
+                    "Мультикнопка" с мессенджерами ставили больше для записи и консультирование клиентов сервиса. Но он
+                    также приносил дополнительные лиды в отдел
+                    продаж, а также 3 продажи были осуществлены через Мессенджер в другие регионы (Байконур, Чита и
+                    Казахстан), т.к. общение через мессенджер было предпочитаемым способом для клиентов. Хочу выразить
+                    отдельную благодарность за индивидуальный подход Account manager, который помогает разрешить любые
+                    вопросы в кратчайшие сроки.
+                    <div class="btn1"></div>
+                </blockquote>
+                <img src="Отзывы/Ника.jpg" alt="ZorNet.Ru — сайт для вебмастера"/>
+                <div class="peopl">
+                    <h3>Елена</h3>
+                    <p class="indentity"><a href="https://nika-chery.ru/" target="_blank">Ника Авто (Оренбург Чери)</a>
+                    </p>
+                </div>
+            </figure>
+        </div>
+        <div>
+            <figure class="testimonial">
+                <blockquote>Наш опыт сотрудничества с PROFcom исключительно положительный, вовлеченность в процессы
+                    клиента, молниеносная обратная связь по любым рабочим вопросам и оперативное решение поставленных
+                    задач - это те партнерские характеристики, которые гарантированы каждому, кто будет сотрудничать с
+                    этой компанией! Всегда подскажут лучшие варианты решения, подберут наиболее результативные
+                    инструменты и аргументированно проконсультируют, сэкономив Ваше время, а также время, потраченное на
+                    настройку и запуск проекта! Уверенно рекомендуем PROFcom и сервисы своим клиентам и коллегам, и
+                    постоянно слышим положительный отклик и слова благодарности!
+                    <div class="btn1"></div>
+                </blockquote>
+                <img src="Отзывы/Глобус.jpg" alt="Ключевое слово"/>
+                <div class="peopl">
+                    <h3>Дмитрий</h3>
+                    <p class="indentity"><a href="http://www.globus-cars.ru/" target="_blank">Автомобильная группа
+                        Глобус (г.Тамбов)</a></p>
+                </div>
+            </figure>
+        </div>
+
+        <div>
+            <figure class="testimonial">
+                <blockquote>С сервисом работаем уже пятый год. Подсключали виджеты "Онлайн-чат" и "Обратный звонок".
+                    Если возникают какие-то трудности, всегда можно обратиться в техподдержку, отвечают оперативно,
+                    готовы помочь в решении вопросов. Большое спасибо за хорошую работу.
+
+                    Сервис PROFcom с уверенностью можно рекомендовать друзьям и коллегам.
+                    <div class="btn1"></div>
+                </blockquote>
+                <img src="Отзывы/КРЭТ.png" alt=""/>
+                <div class="peopl">
+                    <h3>Галина</h3>
+                    <p class="indentity"><a href="https://kaspz.ru/" target="_blank">Каимовскмй приборный завод</a></p>
+                </div>
+            </figure>
+        </div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>PROFcom</h4>
+                    <ul>
+                        <li><a>ИП Артюшина Е.В.</a></li>
+                        <li><a>ИНН 525600490112</a></li>
+                        <li><a>ОГРНИП 321527500054844</a></li>
+                        <li><a href="Документы/Политика конфиденциальности.pdf" target="_blank">Политика
+                            конфиденциальности</a>
+                        </li>
+                        <li><a href="Документы/Договор оферта.pdf" target="_blank">Договор-оферта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" id="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="./Главная.html" data-scroll>Главная</a></li>
+                        <li><a href="./Виджеты.html" data-scroll id="footer-item-true">Виджеты</a></li>
+                        <li><a href="./Контакт-центр.html" data-scroll>Контакт-центр</a></li>
+                        <li><a href="./Разработка%20ботов.html" data-scroll>Разработка ботов</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" id="footer-start">
+                    <h4>Чтобы начать</h4>
+                    <ul>
+                        <li><a>Увеличьте количество заявок со своего сайта без дополнительных расходов на рекламу</a>
+                        </li>
+
+                        <div id="want-widget-footer" class='btn-footer'>
+                            <a class='button-footer'>Оставить заявку</a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Наши контакты</h4>
+                    <ul>
+                        <li><a href="mailto:hello@profcom.online">hello@profcom.online</a></li>
+                        <li><a href="tel:+79519024533">+7 951-902-45-33</a></li>
+                        <li><a href="tel:+79200752000">+7 920-075-20-00</a></li>
+
+                        <div class="social-links">
+                            <a href="https://t.me/PROFcom_APS" target="_blank"><img src='Интеграции/telegram.png'></a>
+                            <a href="viber://chat?number=89200752000" target="_blank"><img
+                                    src='Интеграции/viber.png'></a>
+                            <a href="https://vk.com/im?sel=238749731" target="_blank"><img
+                                    src='Интеграции/vk.png'></a>
+                            <a href="https://api.whatsapp.com/send?phone=79200752000" target="_blank"><img
+                                    src='Интеграции/whatsapp.png'></a>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTopBtn">↑</button>
+
+<script src='script/Widget.js'></script>
+
+</body>
+</html>

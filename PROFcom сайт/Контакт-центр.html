@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style/Contact-center.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./Лого/new-logo2.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>PROFcom | Контакт-центр</title>
+</head>
+<body>
+
+
+<div class='header' id="d1">
+    <div class="overlay">
+        <div class='container'>
+            <div class='header-line'>
+                <div class='header-logo'>
+                    <img src="Лого/new_logo_small1.png" alt="">
+                </div>
+
+                <div class='nav'>
+                    <a class='nav-item' href="./Главная.html">ГЛАВНАЯ</a>
+                    <a class='nav-item' href="./Виджеты.html">ВИДЖЕТЫ</a>
+                    <a class='nav-item' href="./Контакт-центр.html" id="item-true">КОНТАКТ-ЦЕНТР</a>
+                    <a class='nav-item' href="./Разработка%20ботов.html">РАЗРАБОТКА БОТОВ</a>
+                </div>
+
+
+                <div class='phone'>
+                    <div class='phone-holder'>
+                        <div class='phone-img'>
+                            <img src="Значки/phone.png" alt="">
+                        </div>
+
+                        <div class='number'>
+                            <a class='num' href='tel:+79519024533'>+7 951-902-45-33</a>
+                            <br>
+                            <a class='num' href='tel:+79200752000'>+7 920-075-20-00</a>
+                        </div>
+                    </div>
+
+                    <div class='phone-text'>
+                        Свяжитесь с нами
+                    </div>
+                </div>
+
+                <div class='btn1'>
+                    <a class='button' target="_blank">Авторизация</a>
+                </div>
+                <div class='btn'>
+                    <a class='button'target="_blank">Регистрация</a>
+                </div>
+
+                <div class='burger-menu'>
+                    <button id='burger' class="burger-button" tabindex="0">
+                        <div class="burger-icon">
+                            <img src="Значки/burger-img.png" alt="">
+                        </div>
+                    </button>
+                    <div id='menu' class='burger-slide'>
+                        <a class='nav-item-burger block' href="./Главная.html">ГЛАВНАЯ</a>
+                        <a class='nav-item-burger block' href="./Виджеты.html">ВИДЖЕТЫ</a>
+                        <a class='nav-item-burger block' href="./Контакт-центр.html" id="item-burger-true">КОНТАКТ-ЦЕНТР</a>
+                        <a class='nav-item-burger block' href="./Разработка%20ботов.html">РАЗРАБОТКА БОТОВ</a>
+                        <div class="close-button">✕</div>
+                        <div class='number-burger'>
+                            <a class='num-burger' href='tel:+79519024533'>+7 951-902-45-33</a>
+                            <br>
+                            <a class='num-burger' href='tel:+79200752000'>+7 920-075-20-00</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='header-down'>
+                <div class='header-title'>
+                    Цифровой
+                    <div class='header-subtitle'>
+                        Контакт-центр
+                    </div>
+                    <div class='header-suptitle'>
+                        PROFcom
+                    </div>
+                    <div id="myBtn" class='header-bth'>
+                        <a class='header-button'>Оставить заявку</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p class="close">&times;</p>
+        <div class="modal-dodal">
+            <div class='online-text'>
+                ОСТАВЬТЕ ЗАЯВКУ
+                <div class='online-text-bottom'>
+                    на подключение контакт-центра на Вашем сайте и эффективную настройку нашими экспертами
+                </div>
+            </div>
+
+            <form class="form-main" action="Forms/contact-center.php" method="post">
+                <div class="form-block">
+                    <div class="form-name-site">
+                        <input class="form-name" type="text" name="name" id="name" required>
+                        <label class="name">Ваше имя</label>
+                    </div>
+                    <div class="form-phone-email">
+                        <input id="online_phone" name="phone" type="text" required>
+                        <label class="online_phone">Номер Вашего телефона</label>
+                    </div>
+                    <div class="form-name-site">
+                         <input class="form-site" type="text" name="website" id="website" required>
+                        <label class="name">Сайт Вашей компании</label>
+                    </div>
+                    <div class="form-phone-email">
+                        <input class="form-email" type="email" name="email" id="email" required>
+                        <label class="online_phone">Ваша электронная почта</label>
+                    </div>
+                </div>
+
+                <div class="form-text-container">
+                    <textarea class="form-text" name="text" id="text" autofocus="autofocus"></textarea>
+                    <label class="form-text-label" id="text-label" for="text">Какие задачи необходимо выполнить?</label>
+                </div>
+
+                <button class="mobile-button" type="submit"> Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class='dishes'>
+    <div class='container'>
+
+        <div id="d3" class='dishes-title'>
+            ЦИФРОВОЙ <span>КОНТАКТ-ЦЕНТР</span> <br>
+            <span1>почему важно для вас подключить
+                чат цифрового общения с клиентом
+            </span1>
+        </div>
+
+        <div class='burgers'>
+            <div class='burgers-image'>
+                <img src='Фон/contact-center1.png' class='contact-center'>
+            </div>
+
+            <div class='burgers-items'>
+                <div class='burger-item'>
+                    <div class='burger-text'>
+                        <b>• ВОСТРЕБОВАННО:</b> Более <b>1/3 рынка</b> используют любой удобный цифровой канал
+                        общения с компанией. Если компания не использует on-line чат – теряет более <b>30%
+                        трафика.</b>
+                    </div>
+                </div>
+
+                <div class='burger-item'>
+                    <div class='burger-text'>
+                        <b>• ДЛЯ ВСЕХ:</b> Наш опыт показывает, что <b>каждый 2-ой</b> обратившийся в чат клиент
+                        уточняет, что в чате с ним общается «живой» человек.
+                    </div>
+                </div>
+
+                <div class='burger-item'>
+                    <div class='burger-text'>
+                        <b>• УДОБНО для клиента:</b> В чат обращаются клиенты, кому не комфортно/сложно
+                        общаться по телефону.
+                    </div>
+                </div>
+
+                <div class='burger-item'>
+                    <div class='burger-text'>
+                        <b>• ЭФФЕКТИВНО для Вашей компании:</b> Один сотрудник контакт - центра может
+                        общаться сразу с несколькими клиентами.
+                    </div>
+                </div>
+
+                <div class='burger-item'>
+                    <div class='burger-text'>
+                        <b>• ЭКОНОМИЧЕСКИ</b> более <b>ВЫГОДНО</b>, чем разработка и внедрение чат-бота.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class='menu'>
+    <div class='container'>
+        <div class='menu-title'>
+            Наши возможности
+        </div>
+        <div class='menu-items'>
+            <div class='menu-item'>
+                <div class='menu-text'>
+                    Подключить наш контакт-центр ВЫГОДНЕЕ, чем реализовывать своими силами:
+                </div>
+
+                <div class='text-container' id='text-container'>
+                    <div class='text-block' id='text1'>
+                        Найм, обучение, мотивация и контроль новых
+                        сотрудников для обработки чатов требует
+                        больших временных, человеческих и финансовых
+                        ресурсов.
+                    </div>
+                    <div class='text-block' id='text2'>
+                        Менеджеры не успевают отвечать на чаты.
+                        По статистике, если клиент не получил ответ на
+                        свой запрос в течение 20-30 секунд, он покидает
+                        сайт/уходит к конкурентам. Вы теряете прибыль,
+                        страдает репутация компании.
+                    </div>
+                    <div class='text-block' id='text3'>
+                        Наши сотрудники мотивированы на результат. В
+                        то же время, по отзывам наших клиентов,
+                        сотрудники отдела продаж /администраторы
+                        воспринимают «сидение» в чате как
+                        дополнительную и «бесполезную» нагрузку.
+                    </div>
+                    <!-- Добавьте сколько угодно блоков с текстом, меняя id и содержание -->
+                </div>
+
+                <div class='button-container'>
+                    <div class='menu-btn prev-btn' onclick='prevText()'><</div>
+                    <div class='menu-btn next-btn' onclick='nextText()'>></div>
+                </div>
+            </div>
+
+
+            <div class='menu-item'>
+                <div class='menu-text'>
+                    Как работает наш контакт-центр:
+                </div>
+
+                <div class='text-container'>
+                    <div class='text-block' id='text4'>
+                        Клиент обратился через любую цифровую платформу в
+                        Вашу компанию, чтобы получить информацию или консультацию.
+                    </div>
+                    <div class='text-block' id='text5'>
+                        Наши операторы, на нашей территории провели
+                        консультацию, собрали подробную информацию об
+                        обратившемся клиенте и его запросе.
+                    </div>
+                    <div class='text-block' id='text6'>
+                        Операторы передали целевой ЛИД в отдел продаж/
+                        отдел сервиса в удобном для Вас виде (email-заявка или
+                        в группу мессенджерах Telegram/What’sApp и т.п.).
+                    </div>
+                    <div class='text-block' id='text7'>
+                        Ваш сотрудник связывается с «теплым» клиентом,
+                        ожидающим готовое предложение.
+                    </div>
+                    <!-- Добавьте сколько угодно блоков с текстом, меняя id и содержание -->
+                </div>
+
+                <div class='button-container'>
+                    <div class='menu-btn prev-btn' onclick='prevText()'><</div>
+                    <div class='menu-btn next-btn' onclick='nextText()'>></div>
+                </div>
+            </div>
+
+            <div class='menu-item'>
+                <div class='menu-text'>
+                    Что получает автосалон от работы с нами:
+                </div>
+
+                <div class='text-container'>
+                    <div class='text-block' id='text8'>
+                        Данные целевого ЛИДа (имя клиента, его контактный номер телефона,
+                        информация по желаемой покупке и способ связи: WhatsApp/Telegram/Viber и т.д.)
+
+                    </div>
+                    <div class='text-block' id='text9'>
+                        Аналитику по переданным ЛИДам в системах аналитики
+                        (Яндекс.Метрика, Google Analytics).
+                    </div>
+                    <div class='text-block' id='text10'>
+                        Перечень всех переданных ЛИДов для контроля.
+
+                    </div>
+                    <div class='text-block' id='text11'>
+                        Снятие рутинной нагрузки с отдела продаж.
+                    </div>
+                    <div class='text-block' id='text12'>
+                        Накопившийся более, чем за 6 лет, ОПЫТ взаимодействия с
+                        клиентами разных автомобильных брендов, в т.ч. премиум-класса.
+                    </div>
+                    <!-- Добавьте сколько угодно блоков с текстом, меняя id и содержание -->
+                </div>
+
+                <div class='button-container'>
+                    <div class='menu-btn prev-btn' onclick='prevText()'><</div>
+                    <div class='menu-btn next-btn' onclick='nextText()'>></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class='integration'>
+    <div class='container'>
+
+        <div class='menu-title1'>
+            Интеграции
+        </div>
+
+        <div class='coment-text'>
+            Благодаря нашему сервису вы можете получать сообщения из вашего публичного аккаунта любого мессенджера прямо в наш чат –
+            приложение для оператора. Вам больше не нужны дополнительные приложения и ссылки, работайте в одном сервисе.
+        </div>
+
+        <div class='container-integration'>
+            <div class='integration-item' data-title='auto.ru'>
+                <img src='Интеграции/autoru.png' alt='Изображение 1'>
+            </div>
+            <div class='integration-item' data-title='avito'>
+                <img src='Интеграции/avito.png' alt='Изображение 2'>
+            </div>
+            <div class='integration-item' data-title='drom'>
+                <img src='Интеграции/drom.png' alt='Изображение 3'>
+            </div>
+            <div class='integration-item' data-title='Lending'>
+                <img src='Интеграции/lending.png' alt='Изображение 4'>
+            </div>
+            <div class='integration-item' data-title='Одноклас сники'>
+                <img src='Интеграции/odnoklassniki.png' alt='Изображение 5'>
+            </div>
+            <div class='integration-item' data-title='Сайт компании'>
+                <img src='Интеграции/site.png' alt='Изображение 6'>
+            </div>
+            <div class='integration-item' data-title='Telegram'>
+                <img src='Интеграции/telegram.png' alt='Изображение 7'>
+            </div>
+            <div class='integration-item' data-title='Viber'>
+                <img src='Интеграции/viber.png' alt='Изображение 8'>
+            </div>
+            <div class='integration-item' data-title='ВКонтакте'>
+                <img src='Интеграции/vk.png' alt='Изображение 9'>
+            </div>
+            <div class='integration-item' data-title='WhatsApp'>
+                <img src='Интеграции/whatsapp.png' alt='Изображение 10'>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>PROFcom</h4>
+                    <ul>
+                        <li><a>ИП Артюшина Е.В.</a></li>
+                        <li><a>ИНН 525600490112</a></li>
+                        <li><a>ОГРНИП 321527500054844</a></li>
+                        <li><a href="Документы/Политика конфиденциальности.pdf" target="_blank">Политика
+                            конфиденциальности</a>
+                        </li>
+                        <li><a href="Документы/Договор оферта.pdf" target="_blank">Договор-оферта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" id="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="./Главная.html" data-scroll>Главная</a></li>
+                        <li><a href="./Виджеты.html" data-scroll>Виджеты</a></li>
+                        <li><a href="./Контакт-центр.html" data-scroll id="footer-item-true">Контакт-центр</a></li>
+                        <li><a href="./Разработка%20ботов.html" data-scroll>Разработка ботов</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" id="footer-start">
+                    <h4>Чтобы начать</h4>
+                    <ul>
+                        <li><a>Увеличьте количество заявок со своего сайта без дополнительных расходов на рекламу</a>
+                        </li>
+
+                        <div id="want-widget-footer" class='btn-footer'>
+                            <a class='button-footer'>Оставить заявку</a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Наши контакты</h4>
+                    <ul>
+                        <li><a href="mailto:hello@profcom.online">hello@profcom.online</a></li>
+                        <li><a href="tel:+79519024533">+7 951-902-45-33</a></li>
+                        <li><a href="tel:+79200752000">+7 920-075-20-00</a></li>
+
+                        <div class="social-links">
+                            <a href="https://t.me/PROFcom_APS" target="_blank"><img src='Интеграции/telegram.png'></a>
+                            <a href="viber://chat?number=89200752000" target="_blank"><img
+                                    src='Интеграции/viber.png'></a>
+                            <a href="https://vk.com/im?sel=238749731" target="_blank"><img
+                                    src='Интеграции/vk.png'></a>
+                            <a href="https://api.whatsapp.com/send?phone=79200752000" target="_blank"><img
+                                    src='Интеграции/whatsapp.png'></a>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<button id="scrollToTopBtn">↑</button>
+
+
+<script src='script/Contact-center.js'></script>
+
+</body>
+</html>

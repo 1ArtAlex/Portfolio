@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='style/Bots.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Лого/new-logo2.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+    <title>PROFcom | Разработка ботов</title>
+</head>
+<body>
+
+
+<div class='header' id="d1">
+    <div class="overlay">
+        <div class='container'>
+            <div class='header-line'>
+                <div class='header-logo'>
+                    <img src="Лого/new_logo_small1.png" alt="">
+                </div>
+
+                <div class='nav'>
+                    <a class='nav-item' href="./Главная.html">ГЛАВНАЯ</a>
+                    <a class='nav-item' href="./Виджеты.html">ВИДЖЕТЫ</a>
+                    <a class='nav-item' href="./Контакт-центр.html">КОНТАНТ-ЦЕНТР</a>
+                    <a class='nav-item' href="./Разработка%20ботов.html" id="item-true">РАЗРАБОТКА БОТОВ</a>
+                </div>
+
+
+                <div class='phone'>
+                    <div class='phone-holder'>
+                        <div class='phone-img'>
+                            <img src="Значки/phone.png" alt="">
+                        </div>
+
+                        <div class='number'>
+                            <a class='num' href='tel:+79519024533'>+7 951-902-45-33</a>
+                            <br>
+                            <a class='num' href='tel:+79200752000'>+7 920-075-20-00</a>
+                        </div>
+                    </div>
+
+                    <div class='phone-text'>
+                        Свяжитесь с нами
+                    </div>
+                </div>
+
+                <div class='bad-btn'>
+                    <a class='bad-button'>Авторизация</a>
+                </div>
+                <div class='bad-btn'>
+                    <a class='bad-button'>Регистрация</a>
+                </div>
+
+                <div class='burger-menu'>
+                    <button id='burger' class="burger-button" tabindex="0">
+                        <div class="burger-icon">
+                            <img src="Значки/burger-img.png" alt="">
+                        </div>
+                    </button>
+                    <div id='menu' class='burger-slide'>
+                        <a class='nav-item-burger block' href="./Главная.html">ГЛАВНАЯ</a>
+                        <a class='nav-item-burger block' href="./Виджеты.html">ВИДЖЕТЫ</a>
+                        <a class='nav-item-burger block' href="./Контакт-центр.html">КОНТАКТ-ЦЕНТР</a>
+                        <a class='nav-item-burger block' href="./Разработка%20ботов.html" id="item-burger-true">РАЗРАБОТКА
+                            БОТОВ</a>
+
+                        <div class="close-button">✕</div>
+                        <div class='number-burger'>
+                            <a class='num-burger' href='tel:+79519024533'>+7 951-902-45-33</a>
+                            <br>
+                            <a class='num-burger' href='tel:+79200752000'>+7 920-075-20-00</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='header-down'>
+                <div class='header-title'>
+                    Разработка
+                    <div class='header-suptitle'>
+                        Telegram-ботов
+                    </div>
+                    <div class='header-suptitle'>
+                        <p>Создаём удобные чат-боты под индивидуальные задачи для автоматизации бизнес-процессов и
+                            повышения продаж</p>
+                    </div>
+                    <div id="myBtn" class='header-bth'>
+                        <a class='header-button'>Рассчитать стоимость</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <p class="close">&times;</p>
+        <div class="modal-dodal">
+            <div class='online-text'>
+                Обсудим вашего будущего чат бота?
+                <div class='online-text-bottom'>
+                    Оставьте заявку, и мы свяжемся с вами в ближайшее время
+                </div>
+            </div>
+
+            <form class="form-main" action="Forms/bots.php" method="post">
+                <div class="form-block">
+                    <div class="form-name-site">
+                        <input class="form-name" type="text" name="name" id="name" required>
+                        <label class="name" id="name-label">Ваше имя</label>
+                    </div>
+                    <div class="form-phone-email">
+                        <input id="online_phone" name="phone" type="text" required>
+                        <label class="online_phone">Номер Вашего телефона</label>
+                    </div>
+                </div>
+
+                <div class="form-text-container">
+                    <textarea class="form-text" name="text" id="text" autofocus="autofocus"></textarea>
+                    <label class="form-text-label" id="text-label" for="text">Техническое задние (если имеется)</label>
+                </div>
+
+
+                <button class="mobile-button" type="submit"> Отправить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<section class="services">
+    <div class="bots-goods">
+        <div class="services-row">
+
+            <div class="service-card" data-aos="fade-down">
+                <img class="service-card-img" src="Значки/01.svg" alt="UI/UX Design">
+                <h3 class="service-card-title">всегда под рукой</h3>
+                <p>Нет необходимости создавать отдельное приложение, а также просить клиентов их скачивать и
+                    устанавливать. Приложение Telegram под рукой на телефоне или компьютере, а Ваш чат-бот доступен
+                    всегда, в удобном для клиента и Вас месте.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-down">
+                <img class="service-card-img" src="Значки/02.svg" alt="UI/UX Design">
+                <h3 class="service-card-title">Быстро и Удобно</h3>
+                <p>Преимущества использования бота заключаются в том, что все существенные уведомления мгновенно
+                    поступают в телеграм-бот на телефон или компьютер, избегая необходимости посещения сайта и ввода
+                    личных данных.</p>
+            </div>
+
+            <div class="service-card" data-aos="fade-down">
+                <img class="service-card-img" src="Значки/03.svg" alt="UI/UX Design">
+                <h3 class="service-card-title">Только важное</h3>
+                <p>В чат-боте отсутствует масса назойливой рекламы и бесполезных сообщений. Здесь представлен только тот
+                    функционал, который клиент действительно искал, создавая для себя удобное и эффективное
+                    взаимодействие в телеграм-боте.</p>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<main class="main">
+    <section class="home">
+        <div class="container">
+            <div class="home__inner">
+                <div class="home__items">
+                    <div class="home__subtext">Разработчик</div>
+                    <h1 class="home__title">Артюшин Александр</h1>
+                    <p class="home__text">Опытный рaзрaбoтчик Telеgrаm-ботов нa языке Pythоn, JаvaScript, HTML и дp.
+                        языкax. Coздаем чaт-боты в Telegram на языках программирования (не на конструкторе).</p>
+                </div>
+                <div class="home__image">
+                    <img src="Фон/home-man1.png" alt="home img" class="home__img">
+                    <div class="home-eat__img">
+                        <!--                        <img src="img/home/home-eat3.png" alt="" class="home-eat__img">-->
+                        <!--                        <img src="img/home/home-eat4.png" alt="" class="home-eat__img">-->
+                        <!--                        <img src="img/home/home-eat5.png" alt="" class="home-eat__img">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="service">
+        <div class="container">
+            <div class="service__inner">
+
+                <div class="service__item">
+                    <div class="service__image">
+                        <img src="Значки/s-box.png" alt="service" class="service__img">
+
+                    </div>
+                    <h3 class="service-item__title">От идеи к реализации</h3>
+                </div>
+
+                <div class="service__item">
+                    <div class="service__image">
+                        <img src="Значки/s-phone.png" alt="service" class="service__img">
+                    </div>
+                    <h3 class="service-item__title">Готовые Решения</h3>
+                </div>
+
+                <div class="service__item">
+                    <div class="service__image">
+                        <img src="Значки/s-scooter.png" alt="service" class="service__img">
+
+                    </div>
+                    <h3 class="service-item__title">Работа по договору</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="serving">
+        <div class="container">
+            <div class="serving__inner">
+                <div class="serving__image">
+                    <img src="Фон/serving.png" alt="serving" class="serving__img">
+                </div>
+                <div class="serving__items">
+                    <h2 class="serving__title">Такой сотрудник нужен всем</h2>
+                    <p class="serving__text">Чат-бот подойдет для любых организаций, которые хотят обеспечить своим
+                        клиентам быстрое и эффективное обслуживание.</p>
+                    <a id="wantBot" class="serving__link btn">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="food">
+        <div class="container">
+            <div class="food__inner">
+                <h2 class="food__title">Не спит. Не отдыхает. Не просит зарплату.</h2>
+
+                <div class="food__row">
+
+                    <div class="food__column">
+                        <div class="food__item">
+                            <div class="food__item--image">
+                                <img src="Значки/food11.png" alt="" class="food__item--img">
+                            </div>
+                            <div class="food__item--block">
+                                <h3 class="food__item--title">Консультирует</h3>
+                                <p class="food__item--text">Поможет подобрать нужный товар, уведомит о статусе заказа,
+                                    расскажет об акциях и скидках.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food__column">
+                        <div class="food__item">
+                            <div class="food__item--image">
+                                <img src="Значки/food22.png" alt="" class="food__item--img">
+                            </div>
+                            <div class="food__item--block">
+                                <h3 class="food__item--title">Всегда онлайн</h3>
+                                <p class="food__item--text">Онлайн, даже ночью, когда сотрудники не на рабочем
+                                    месте.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food__column">
+                        <div class="food__item">
+                            <div class="food__item--image">
+                                <img src="Значки/food33.png" alt="" class="food__item--img">
+                            </div>
+                            <div class="food__item--block">
+                                <h3 class="food__item--title">Принимает оплату</h3>
+                                <p class="food__item--text">Может принимать платежи и расширить воронку продаж.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food__column">
+                        <div class="food__item">
+                            <div class="food__item--image">
+                                <img src="Значки/food44.png" alt="" class="food__item--img">
+                            </div>
+                            <div class="food__item--block">
+                                <h3 class="food__item--title">Напомнит</h3>
+                                <p class="food__item--text">Напомнит о брошенной корзине, расскажет о специальных
+                                    предложениях и поступлении нового товара.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food__column">
+                        <div class="food__item">
+                            <div class="food__item--image">
+                                <img src="Значки/food55.png" alt="" class="food__item--img">
+                            </div>
+                            <div class="food__item--block">
+                                <h3 class="food__item--title">Опросит</h3>
+                                <p class="food__item--text">Сбор информации о целевой аудитории компании для разработки
+                                    стратегии продвижения.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="food__column">
+                        <div class="food__item">
+                            <div class="food__item--image">
+                                <img src="Значки/food66.png" alt="" class="food__item--img">
+                            </div>
+                            <div class="food__item--block">
+                                <h3 class="food__item--title">Найдет</h3>
+                                <p class="food__item--text">Сделает удобным и быстрым поиск и обработку информации
+                                    из интернета.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="discont">
+        <div class="container">
+            <div class="discont__inner">
+                <div class="discont__item">
+                    <h2 class="discont__title">Почему переходят на <span>чат ботов</span></h2>
+                    <div class="statistics-block">
+                        <div class="number-block" data-count="100">
+                            <span class="count">0</span>
+                            <p class="description1">Человек пользуется соцсетями и мессенджерами в РФ</p>
+                        </div>
+                        <div class="number-block decimal" data-count="63.5">
+                            <span class="count">0</span>
+                            <p class="description1">Предпочитают написать в компанию, а не звонить</p>
+                        </div>
+                        <div class="number-block decimal" data-count="32.3">
+                            <span class="count">0</span>
+                            <p class="description1">Средний рост конверсии после введения чат-бота</p>
+                        </div>
+                        <div class="number-block" data-count="8">
+                            <span class="count">0</span>
+                            <p class="description1">занимает Telegram в рейтинге самых популярных соц. сетей</p>
+                        </div>
+                    </div>
+                    <div class="discont__button">
+                        <a id="wantBot1" class="discont__link">Оставить заявку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dishes">
+        <div class="container">
+            <h2 class="dishes__title">Наше портфолио</h2>
+            <div class="dishes__inner">
+                <div class="dishes__tab">
+                    <button class="dishes__tab-btn" type="button" data-tab="#breakfast">Онлайн-школа</button>
+                    <button class="dishes__tab-btn" type="button" data-tab="#lunch">Автомобильный дилер</button>
+                </div>
+                <div class="dishes__content">
+
+                    <div class="dishes__body" id="breakfast">
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat11.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Обратный отсчет в режиме реального веремени</h3>
+
+                        </a>
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat22.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Настраиваемая ежедневная рассылка </h3>
+                        </a>
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat33.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Веб-приложение с тренажером</h3>
+                        </a>
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat44.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Удобная навигация</h3>
+                        </a>
+
+                    </div>
+
+                    <div class="dishes__body" id="lunch">
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat55.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Запись на все услуги</h3>
+                        </a>
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat66.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Убодное веб-приложение с подробной информацией</h3>
+                        </a>
+
+                        <a class="dishes__item">
+                            <div class="dishes__image">
+                                <img src="img/dishes-eat77.png" alt="dishes eat" class="dishes__img">
+                            </div>
+                            <h3 class="dishes__item--title">Отдельная беседа со всеми заявками</h3>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app">
+        <div class="container">
+            <div class="app__inner">
+                <div class="app__item">
+                    <h2 class="app__title">Хотите обсудить внедрение чат-бота в ваш бизнес?</h2>
+                    <a id="wantBot2" class="app__link btn">Хочу cебе бота</a>
+                </div>
+                <div class="app__image">
+                    <img src="Фон/app.png" alt="app" class="app__img">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>PROFcom</h4>
+                    <ul>
+                        <li><a>ИП Артюшина Е.В.</a></li>
+                        <li><a>ИНН 525600490112</a></li>
+                        <li><a>ОГРНИП 321527500054844</a></li>
+                        <li><a href="Документы/Политика конфиденциальности.pdf" target="_blank">Политика
+                            конфиденциальности</a>
+                        </li>
+                        <li><a href="Документы/Договор оферта.pdf" target="_blank">Договор-оферта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" id="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="./Главная.html" data-scroll>Главная</a></li>
+                        <li><a href="./Виджеты.html" data-scroll>Виджеты</a></li>
+                        <li><a href="./Контакт-центр.html" data-scroll>Контакт-центр</a></li>
+                        <li><a href="./Разработка%20ботов.html" data-scroll id="footer-item-true">Разработка ботов</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" id="footer-start">
+                    <h4>Чтобы начать</h4>
+                    <ul>
+                        <li><a>Увеличьте количество заявок со своего сайта без дополнительных расходов на рекламу</a>
+                        </li>
+
+                        <div id="want-widget-footer" class='btn-footer'>
+                            <a class='button-footer'>Оставить заявку</a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Наши контакты</h4>
+                    <ul>
+                        <li><a href="mailto:hello@profcom.online">hello@profcom.online</a></li>
+                        <li><a href="tel:+79519024533">+7 951-902-45-33</a></li>
+                        <li><a href="tel:+79200752000">+7 920-075-20-00</a></li>
+
+                        <div class="social-links">
+                            <a href="https://t.me/PROFcom_APS" target="_blank"><img src='Интеграции/telegram.png'></a>
+                            <a href="viber://chat?number=89200752000" target="_blank"><img
+                                    src='Интеграции/viber.png'></a>
+                            <a href="https://vk.com/im?sel=238749731" target="_blank"><img
+                                    src='Интеграции/vk.png'></a>
+                            <a href="https://api.whatsapp.com/send?phone=79200752000" target="_blank"><img
+                                    src='Интеграции/whatsapp.png'></a>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+           <div class="row">
+                <p id="copyright"></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollToTopBtn">↑</button>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src='script/Bots.js'></script>
+
+</body>
+</html>
