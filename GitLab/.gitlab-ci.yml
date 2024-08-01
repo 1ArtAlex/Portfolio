@@ -1,0 +1,102 @@
+stages:
+  - linter
+  - build
+  - test
+  - deploy
+  - package
+
+
+linter_1:
+  stage: linter
+  script: 
+    - python3 lint/lint_copyright.py
+  tags:
+    - lint
+
+
+linter_2:
+  stage: linter
+  script: 
+    - python3 lint/lint_code_syntax.py
+  tags:
+    - lint
+
+
+build_ubuntu:
+  stage: build
+  script:
+    - g++ -std=c++17 scr/main.cpp scr/infix_calculator_gui.cpp scr/infix_calculator_gui.h scr/infix_calculator.cpp scr/infix_calculator.h scr/postfix_calculator.cpp scr/postfix_calculator.h scr/queue.h scr/stack.h scr/linked_list.h 
+  tags:
+    - ubuntu
+
+
+build_debian:
+  stage: build
+  script:
+    - g++ -std=c++17 scr/main.cpp scr/infix_calculator_gui.cpp scr/infix_calculator_gui.h scr/infix_calculator.cpp scr/infix_calculator.h scr/postfix_calculator.cpp scr/postfix_calculator.h scr/queue.h scr/stack.h scr/linked_list.h 
+  tags:
+    - debian
+
+
+build_win:
+  stage: build
+  tags:
+    - windows
+  script:
+    - g++ -std=c++17 scr/main.cpp scr/infix_calculator_gui.cpp scr/infix_calculator_gui.h scr/infix_calculator.cpp scr/infix_calculator.h scr/postfix_calculator.cpp scr/postfix_calculator.h scr/queue.h scr/stack.h scr/linked_list.h 
+
+
+build_docker:
+  stage: build
+  script:
+    - docker build -t myapp .
+  tags:
+    - ubuntu
+
+
+unit_tests:
+  stage: test
+  script:
+    - cmake .  
+    - make
+    - ctest --output-on-failure  
+  tags:
+    - test1
+
+
+use_case_tests:
+  stage: test
+  script:
+    - cmake . 
+    - make  
+    - ctest --output-on-failure  
+  tags:
+    - test2
+
+
+deploy:
+  stage: deploy
+  script:
+    - echo "35x5fqx.Qx/(HM7" | docker login -u "aartyushinn" --password-stdin
+    - docker tag myapp aartyushinn/rayangosling:latest
+    - docker push aartyushinn/rayangosling:latest
+  tags:
+    - lint
+
+
+package_ubuntu:
+  stage: package
+  image: alpine:latest
+  dependencies:
+    - build_ubuntu
+  script:
+    - mkdir build
+    - cd build
+    - cmake .. 
+    - cmake --build . --target package
+    - zip -r calculator_package.zip .
+  artifacts:
+    paths:
+      - build/calculator_package.zip
+  tags:
+    - ubuntu
