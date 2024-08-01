@@ -1584,8 +1584,8 @@ def main():
     root = tk.Tk()
     root.title("Подключение к базе данных")
 
-    default_user = "postgres"
-    default_password = "I4seeyiseey"
+    default_user = "login"
+    default_password = "password"
 
     root.columnconfigure(0, weight=1)
     root.columnconfigure(1, weight=1)
