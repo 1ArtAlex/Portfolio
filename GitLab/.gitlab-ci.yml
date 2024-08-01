@@ -77,7 +77,7 @@ use_case_tests:
 deploy:
   stage: deploy
   script:
-    - echo "35x5fqx.Qx/(HM7" | docker login -u "aartyushinn" --password-stdin
+    - echo "login" | docker login -u "password" --password-stdin
     - docker tag myapp aartyushinn/rayangosling:latest
     - docker push aartyushinn/rayangosling:latest
   tags:
