@@ -47,8 +47,8 @@ public class DatabaseManager {
     // Метод для создания таблицы
     public void createTable(String dbPrem, String tableName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbPrem;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "CREATE TABLE " + tableName + " ()";
@@ -62,8 +62,8 @@ public class DatabaseManager {
     public ArrayList<String> getAllTables(String dbPrem) throws SQLException {
         ArrayList<String> tables = new ArrayList<>();
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbPrem;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         String sql = "SELECT table_name FROM information_schema.tables WHERE table_catalog = ? AND table_schema = 'public' ORDER BY table_name ASC";
 
@@ -83,8 +83,8 @@ public class DatabaseManager {
     // Метод для добавления столбца в указанную таблицу в указанной базе данных с текстовым форматом данных по умолчанию
     public void addColumn(String dbName, String tableName, String columnName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "ALTER TABLE " + tableName + " ADD COLUMN " + columnName + " TEXT";
@@ -97,8 +97,8 @@ public class DatabaseManager {
     // Метод для удаления таблицы
     public void dropTable(String dbName, String tableName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              Statement stmt = connection.createStatement()) {
@@ -111,8 +111,8 @@ public class DatabaseManager {
     public ArrayList<String> getAllColumns(String dbName, String tableName) throws SQLException {
         ArrayList<String> columns = new ArrayList<>();
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              Statement statement = connection.createStatement();
@@ -132,8 +132,8 @@ public class DatabaseManager {
     // Метод для удаления столбца из таблицы
     public void dropColumn(String dbName, String tableName, String columnName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement stmt = null;
@@ -155,8 +155,8 @@ public class DatabaseManager {
     public ArrayList<String> getColumnTypes(String dbName, String tableName) throws SQLException {
         ArrayList<String> columnTypes = new ArrayList<>();
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              Statement statement = connection.createStatement();
@@ -174,8 +174,8 @@ public class DatabaseManager {
     // Метод для получения количества столбцов в таблице
     public int getColumnCount(String dbName, String tableName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password);
              Statement statement = connection.createStatement();
@@ -188,8 +188,8 @@ public class DatabaseManager {
     // Метод для вставки новых данных в указанную таблицу в указанной базе данных
     public void insertData(String dbName, String tableName, Object[] data) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             StringBuilder sql = new StringBuilder("INSERT INTO " + tableName + " VALUES (");
@@ -220,8 +220,8 @@ public class DatabaseManager {
     // Метод для очистки таблицы
     public void clearTable(String dbName, String tableName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "DELETE FROM " + tableName;
@@ -234,8 +234,8 @@ public class DatabaseManager {
     // Метод для получения содержимого таблицы в формате HTML
     public String getTableContent(String dbName, String tableName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         StringBuilder tableContent = new StringBuilder();
         tableContent.append("<html><body><table border=\"1\">");
@@ -266,8 +266,8 @@ public class DatabaseManager {
     // Метод для обновления значения в указанной записи и столбце таблицы
     public void updateTableRow(String dbName, String tableName, int rowIndex, String columnName, String newValue) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "UPDATE " + tableName + " SET " + columnName + " = ? WHERE ctid = (SELECT ctid FROM " + tableName + " OFFSET ? LIMIT 1)";
@@ -283,8 +283,8 @@ public class DatabaseManager {
     public ArrayList<String> getTableColumns(String dbName, String tableName) throws SQLException {
         ArrayList<String> columns = new ArrayList<>();
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             DatabaseMetaData metaData = connection.getMetaData();
@@ -302,8 +302,8 @@ public class DatabaseManager {
     public ArrayList<String> getTableRows(String dbName, String tableName) throws SQLException {
         ArrayList<String> rows = new ArrayList<>();
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "SELECT * FROM " + tableName;
@@ -325,8 +325,8 @@ public class DatabaseManager {
     // Метод для получения предыдущего значения столбца для выбранной записи
     public String getPreviousColumnValue(String dbName, String tableName, int rowIndex, String selectedColumn) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
         String previousValue = null;
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
@@ -346,8 +346,8 @@ public class DatabaseManager {
     // Метод для переименования базы данных
     public void renameDatabase(String oldName, String newName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "ALTER DATABASE " + oldName + " RENAME TO " + newName;
@@ -360,8 +360,8 @@ public class DatabaseManager {
     // Метод для проверки, используется ли база данных другими пользователями
     public boolean isDatabaseInUse(String dbName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "SELECT count(*) FROM pg_stat_activity WHERE datname = ?";
@@ -381,8 +381,8 @@ public class DatabaseManager {
     // Метод для переименования таблицы
     public void renameTable(String dbName, String oldTableName, String newTableName) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             String sql = "ALTER TABLE " + oldTableName + " RENAME TO " + newTableName;
@@ -395,8 +395,8 @@ public class DatabaseManager {
     // Метод для поиска в таблице
     public String searchInTable(String dbName, String tableName, String columnName, String searchValue) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         StringBuilder searchResult = new StringBuilder();
         searchResult.append("<html><body><table border=\"1\">");
@@ -429,8 +429,8 @@ public class DatabaseManager {
     // Метод для удаления данных по значению
     public int deleteRowsByValue(String dbName, String tableName, String columnName, String valueToDelete) throws SQLException {
         String url = "jdbc:postgresql://127.0.0.1:5432/" + dbName;
-        String username = "postgres";
-        String password = "I4seeyiseey";
+        String username = "login";
+        String password = "password";
 
         int rowsDeleted = 0;
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
