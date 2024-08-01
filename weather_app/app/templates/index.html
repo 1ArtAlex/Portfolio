@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+    <style>
+        .tt-menu {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            width: calc(100% - 2px);
+        }
+
+        .tt-suggestion {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tt-suggestion:hover {
+            background-color: #f2f2f2;
+        }
+
+        .search-history {
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #f2f2f2;
+        }
+
+        .search-history span {
+            cursor: pointer;
+            margin-right: 5px;
+            color: black;
+        }
+
+        .search-history span:hover {
+            color: blue;
+        }
+
+        .search-history-title {
+            font-weight: bold;
+            color: black;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+<h1>Weather App</h1>
+
+<form id="weather-form" method="POST">
+    {{ form.hidden_tag() }}
+    <input type="text" name="city" id="city-input" class="form-control" autocomplete="off"
+           placeholder="Введите город...">
+    {{ form.submit() }}
+</form>
+
+<div class="search-history" id="search-history"></div>
+
+{% if weather %}
+    <h2>Weather in {{ form.city.data }}</h2>
+    <ul>
+        <li><strong>Дата:</strong> {{ weather.time }}</li>
+        <li><strong>Температура:</strong> {{ weather.temperature }}°C</li>
+        <li><strong>Скорость ветра:</strong> {{ weather.windspeed }} m/s</li>
+        <li><strong>Направление ветра:</strong>
+            {% if weather.winddirection >= 337.5 or weather.winddirection < 22.5 %}
+                Северный
+            {% elif weather.winddirection >= 22.5 and weather.winddirection < 67.5 %}
+                Северо-восточный
+            {% elif weather.winddirection >= 67.5 and weather.winddirection < 112.5 %}
+                Восточный
+            {% elif weather.winddirection >= 112.5 and weather.winddirection < 157.5 %}
+                Юго-восточный
+            {% elif weather.winddirection >= 157.5 and weather.winddirection < 202.5 %}
+                Южный
+            {% elif weather.winddirection >= 202.5 and weather.winddirection < 247.5 %}
+                Юго-западный
+            {% elif weather.winddirection >= 247.5 and weather.winddirection < 292.5 %}
+                Западный
+            {% elif weather.winddirection >= 292.5 and weather.winddirection < 337.5 %}
+                Северо-западный
+            {% endif %}
+        </li>
+        {% if weather.is_day %}
+            <li><strong>Время суток:</strong> Дневное время</li>
+        {% else %}
+            <li><strong>Время суток:</strong> Ночное время</li>
+        {% endif %}
+    </ul>
+    <h3>Прогноз погоды на ближайшие несколько часов</h3>
+    <ul>
+        {% for entry in forecast %}
+            <li><strong>Время:</strong> {{ entry.time }} <strong>Температура:</strong> {{ entry.temperature }}°C</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<script>
+    $(document).ready(function () {
+        var citiesAutocomplete = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            remote: {
+                url: '/api/cities?q=%QUERY',
+                wildcard: '%QUERY'
+            }
+        });
+
+        var typeaheadInput = $('#city-input');
+        typeaheadInput.typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        }, {
+            name: 'cities-autocomplete',
+            display: 'name',
+            source: citiesAutocomplete
+        });
+
+        $('#search-history').on('click', '.history-item', function () {
+            var selectedCity = $(this).text().trim();
+            typeaheadInput.typeahead('val', selectedCity);
+            $('#weather-form').submit(); // Отправляем форму при клике на город
+        });
+
+        function renderHistorySuggestions(data) {
+            if (data.length > 0) {
+                var suggestions = '<span class="search-history-title">Вы искали ранее: </span>';
+                var citiesToShow = data.slice(-3);
+                for (var i = 0; i < citiesToShow.length; i++) {
+                    suggestions += '<span class="history-item">' + citiesToShow[i].city + '</span>';
+                    if (i < citiesToShow.length - 1) {
+                        suggestions += '; ';
+                    }
+                }
+                $('#search-history').html(suggestions);
+            }
+        }
+
+        $.ajax({
+            url: '/api/history',
+            method: 'GET',
+            success: function (data) {
+                renderHistorySuggestions(data);
+            },
+            error: function () {
+                console.error('Не удалось загрузить историю поиска.');
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
